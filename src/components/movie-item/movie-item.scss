@@ -1,0 +1,46 @@
+@import "./../../scss/utilities/variables";
+@import "./../../scss/utilities/mixins";
+
+.movie-item {
+  &:hover {
+    .text-md {
+      color: $color-red;
+      font-weight: 700;
+    }
+
+    .poster {
+      .overlay {
+        opacity: 1;
+        color: $color-red;
+        font-size: 3.6rem;
+      }
+    }
+  }
+
+  .poster {
+    @include flex(center, center);
+    position: relative;
+
+    img {
+      border-radius: $border-radius;
+    }
+
+    .overlay {
+      @include flex(center, center);
+      @include overlay(0.6);
+
+      width: 100%;
+      height: 100%;
+
+      border-radius: $border-radius;
+      font-size: 0;
+      opacity: 0;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      transition: all 0.3s ease;
+    }
+  }
+}

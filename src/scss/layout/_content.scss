@@ -1,0 +1,41 @@
+.movie-content {
+  @include flex(flex-start, flex-start);
+  gap: 2.4rem;
+
+  .poster {
+    flex: 1;
+
+    img {
+      border-radius: $border-radius;
+    }
+  }
+
+  .info {
+    @include flex(flex-start, flex-start);
+
+    flex-flow: column;
+    gap: 2.4rem;
+
+    width: 70%;
+    position: relative;
+
+    .genres-item {
+      font-size: 1rem;
+      font-weight: 600;
+      border: 0.2rem solid $color-red;
+      border-radius: $border-radius * 2;
+      padding: 0.5rem 1.5rem;
+
+      + .genres-item {
+        margin-left: 0.8rem;
+      }
+    }
+
+    .list {
+      @include flex(start, start);
+      flex-flow: column;
+      font-weight: 700;
+      gap: 0.8rem;
+    }
+  }
+}

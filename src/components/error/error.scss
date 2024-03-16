@@ -1,0 +1,10 @@
+@import "./../../scss/utilities/variables";
+
+.error {
+  color: $color-red;
+  font-weight: bold;
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
